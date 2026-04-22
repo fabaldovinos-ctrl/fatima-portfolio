@@ -3,48 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <title>Fatima Baldovinos | Portfolio</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f5f2;
-      color: #333;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f6f4f1;
+      color: #2e2e2e;
       margin: 0;
-      padding: 0;
     }
-    .section {
-      padding: 80px 20px;
+
+    .container {
       max-width: 900px;
       margin: auto;
+      padding: 80px 20px;
     }
+
     h1 {
-      font-size: 40px;
+      font-size: 48px;
+      font-weight: 500;
       margin-bottom: 10px;
     }
+
     h2 {
-      margin-top: 40px;
-      font-size: 24px;
+      font-size: 26px;
+      margin-top: 60px;
+      margin-bottom: 10px;
+      font-weight: 500;
     }
+
     p {
-      line-height: 1.6;
-      max-width: 500px;
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 15px;
     }
+
     .hero {
-      padding: 120px 20px;
+      padding-top: 120px;
     }
+
+    .tagline {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
     a {
-      display: inline-block;
-      margin-top: 20px;
       text-decoration: none;
       color: #555;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .project {
+      margin-top: 60px;
+    }
+
+    .project-title {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .project-desc {
+      margin-top: 10px;
+    }
+
+    .image-placeholder {
+      margin-top: 20px;
+      width: 100%;
+      height: 220px;
+      background-color: #eae7e2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 14px;
+    }
+
+    .contact {
+      margin-top: 80px;
     }
   </style>
 </head>
 
 <body>
 
-<div class="section hero">
+<!-- HERO -->
+<div class="container hero">
   <h1>Fatima Baldovinos</h1>
-  <p><strong>Instructional Design & Learning Experiences</strong></p>
+  <p class="tagline">Instructional Design & Learning Experiences</p>
 
   <p>
     I create learning experiences  
@@ -52,10 +96,11 @@
     and adaptable.
   </p>
 
-  <a href="#projects">View Projects</a>
+  <a href="#projects">View Work</a>
 </div>
 
-<div class="section" id="about">
+<!-- ABOUT -->
+<div class="container">
   <h2>About</h2>
 
   <p>
@@ -72,35 +117,113 @@
   </p>
 
   <p>
+    I’ve worked across different  
+    environments and cultures,  
+    learning to adapt quickly  
+    and design with empathy  
+    and flexibility.
+  </p>
+
+  <p>
     Adaptability and empathy  
     are at the core  
     of how I design.
   </p>
 </div>
 
-<div class="section" id="projects">
-  <h2>Selected Projects</h2>
+<!-- PROJECTS -->
+<div class="container" id="projects">
+  <h2>Learning Experiences I’ve Designed</h2>
 
   <p>
-    A collection of learning experiences  
-    designed for real people,  
-    real workplaces,  
-    and real moments of change.
+    Each project reflects a different context, audience,  
+    and approach to designing meaningful learning.
   </p>
+
+  <!-- MYCO -->
+  <div class="project">
+    <p class="project-title">
+      Designing a Bilingual Onboarding Experience for Manufacturing Teams
+    </p>
+
+    <p class="project-desc">
+      A structured onboarding journey created to support both English  
+      and Spanish-speaking employees in a manufacturing environment,  
+      focusing on clarity, safety, and accessibility.
+    </p>
+
+    <div class="image-placeholder">
+      Myco Onboarding Image
+    </div>
+  </div>
+
+  <!-- WORKEYS -->
+  <div class="project">
+    <p class="project-title">
+      Building Career Identity Through Structured Learning Experiences
+    </p>
+
+    <p class="project-desc">
+      A professional development curriculum designed to guide individuals  
+      through personal branding, career positioning,  
+      and long-term growth planning.
+    </p>
+
+    <div class="image-placeholder">
+      Workeys Program Image
+    </div>
+  </div>
+
+  <!-- DISAL -->
+  <div class="project">
+    <p class="project-title">
+      Designing Emotional Wellbeing Micro-Learning Experiences
+    </p>
+
+    <p class="project-desc">
+      A series of short, reflective learning pieces aimed at promoting  
+      emotional awareness, self-regulation,  
+      and mental wellbeing in the workplace.
+    </p>
+
+    <div class="image-placeholder">
+      Emotional Wellbeing Project Image
+    </div>
+  </div>
+
+  <!-- CHILDREN -->
+  <div class="project">
+    <p class="project-title">
+      Supporting Families Through Accessible Learning Guides
+    </p>
+
+    <p class="project-desc">
+      Visual and easy-to-understand educational materials designed  
+      to help families explain complex topics  
+      to young children in a safe and supportive way.
+    </p>
+
+    <div class="image-placeholder">
+      Children Learning Guide Image
+    </div>
+  </div>
+
 </div>
 
-<div class="section" id="contact">
+<!-- CONTACT -->
+<div class="container contact">
   <h2>Let’s Connect</h2>
 
   <p>
     I’m always open  
     to meaningful conversations  
-    about learning and new opportunities.
+    about learning, people,  
+    and new opportunities.
   </p>
 
   <p>
-    Email: <a href="mailto:your@email.com">your@email.com</a><br>
-    LinkedIn: <a href="#">your-linkedin</a>
+    <a href="mailto:your@email.com">your@email.com</a><br>
+    <a href="#">LinkedIn</a>
   </p>
 </div>
 
