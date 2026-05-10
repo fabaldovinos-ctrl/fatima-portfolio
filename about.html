@@ -1,0 +1,444 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Fatima Baldovinos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#f7f5f1;
+    --text:#2f4746;
+    --accent:#c98978;
+    --card:#ffffff;
+    --soft-green:#dde3df;
+    --soft-pink:#ead8d5;
+    --soft-blue:#dfe9ef;
+    --muted:#5d6a66;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--bg);
+    font-family:'Inter', sans-serif;
+    color:var(--text);
+}
+
+.container{
+    width:90%;
+    max-width:1180px;
+    margin:auto;
+}
+
+header{
+    padding:30px 0;
+    border-bottom:1px solid rgba(0,0,0,.05);
+}
+
+.header-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.brand-name{
+    font-family:'Playfair Display', serif;
+    font-size:2.3rem;
+    font-weight:600;
+}
+
+.brand-subtitle{
+    color:var(--accent);
+    font-size:.8rem;
+    letter-spacing:5px;
+    margin-top:8px;
+}
+
+nav a{
+    margin-left:30px;
+    text-decoration:none;
+    color:var(--text);
+    font-weight:500;
+    transition:.25s ease;
+}
+
+nav a:hover{
+    color:var(--accent);
+}
+
+/* ABOUT INTRO */
+
+.about-intro{
+    padding:110px 0 90px;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:80px;
+    align-items:center;
+}
+
+.about-label{
+    color:var(--accent);
+    letter-spacing:5px;
+    font-size:.8rem;
+    margin-bottom:25px;
+}
+
+.about-copy h1{
+    font-family:'Playfair Display', serif;
+    font-size:4.2rem;
+    line-height:1.08;
+    margin-bottom:30px;
+    max-width:650px;
+}
+
+.about-copy p{
+    font-size:1.05rem;
+    line-height:1.95;
+    color:var(--muted);
+    margin-bottom:24px;
+    max-width:580px;
+}
+
+.about-image-wrap{
+    position:relative;
+}
+
+.about-image-shape{
+    position:absolute;
+    width:330px;
+    height:330px;
+    background:var(--soft-pink);
+    border-radius:50%;
+    top:-35px;
+    right:-30px;
+    opacity:.45;
+}
+
+.about-image{
+    position:relative;
+    z-index:2;
+    width:100%;
+    border-radius:32px;
+    overflow:hidden;
+    background:var(--soft-blue);
+}
+
+.about-image img{
+    width:100%;
+    display:block;
+}
+
+/* BEHIND THE WORK */
+
+.behind-section{
+    padding:100px 0;
+    background:#fbfaf8;
+}
+
+.behind-content{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.behind-label{
+    color:var(--accent);
+    letter-spacing:5px;
+    font-size:.78rem;
+    margin-bottom:25px;
+}
+
+.behind-quote{
+    font-family:'Playfair Display', serif;
+    font-size:3.2rem;
+    line-height:1.35;
+    margin-bottom:35px;
+    color:var(--text);
+}
+
+.behind-text{
+    font-size:1.08rem;
+    line-height:1.95;
+    color:var(--muted);
+    max-width:700px;
+    margin:auto;
+}
+
+/* STRENGTHS */
+
+.strengths{
+    padding:110px 0;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-heading small{
+    color:var(--accent);
+    letter-spacing:5px;
+    font-size:.78rem;
+}
+
+.section-heading h2{
+    font-family:'Playfair Display', serif;
+    font-size:3.2rem;
+    margin-top:18px;
+}
+
+.strength-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+.strength-item{
+    padding-bottom:18px;
+    border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.strength-item h4{
+    font-family:'Playfair Display', serif;
+    font-size:1.5rem;
+    margin-bottom:14px;
+}
+
+.strength-item p{
+    line-height:1.9;
+    color:var(--muted);
+}
+
+/* PERSONAL NOTE */
+
+.personal-note{
+    padding:70px 0 120px;
+}
+
+.note-card{
+    background:white;
+    border-radius:32px;
+    padding:70px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+}
+
+.note-card h3{
+    font-family:'Playfair Display', serif;
+    font-size:2.7rem;
+    margin-bottom:28px;
+}
+
+.note-card p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.95;
+    color:var(--muted);
+    font-size:1.05rem;
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+.header-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+}
+
+nav a{
+    margin-left:0;
+    margin-right:20px;
+}
+
+.about-grid{
+    grid-template-columns:1fr;
+    gap:50px;
+}
+
+.about-copy h1{
+    font-size:3rem;
+}
+
+.about-image-shape{
+    width:240px;
+    height:240px;
+    right:-10px;
+}
+
+.behind-quote{
+    font-size:2.3rem;
+}
+
+.section-heading h2{
+    font-size:2.5rem;
+}
+
+.strength-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+}
+
+.note-card{
+    padding:45px 30px;
+}
+
+.note-card h3{
+    font-size:2.1rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container header-inner">
+
+        <div>
+            <div class="brand-name">Fatima Baldovinos</div>
+            <div class="brand-subtitle">INSTRUCTIONAL DESIGNER</div>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="index.html#selected-work">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="about-intro">
+
+    <div class="container about-grid">
+
+        <div class="about-copy">
+
+            <div class="about-label">ABOUT ME</div>
+
+            <h1>
+                Creating learning experiences that feel clear, human, and meaningful.
+            </h1>
+
+            <p>
+                My work is rooted in the belief that learning should feel practical, accessible, and empowering. After years of supporting people through education, coaching, onboarding, and workplace training, I became passionate about designing experiences that help people feel confident in what they do.
+            </p>
+
+            <p>
+                With a background in psychology, bilingual education, workforce development, and employee support, I bring a human centered perspective to instructional design with a focus on clarity, empathy, and real world impact.
+            </p>
+
+        </div>
+
+        <div class="about-image-wrap">
+
+            <div class="about-image-shape"></div>
+
+            <div class="about-image">
+                <img src="images/fatima-about-blue.jpg" alt="Fatima Baldovinos portrait">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="behind-section">
+
+    <div class="container">
+
+        <div class="behind-content">
+
+            <div class="behind-label">BEHIND THE WORK</div>
+
+            <div class="behind-quote">
+                “Behind every training experience is a desire to help people feel capable, confident, and supported.”
+            </div>
+
+            <p class="behind-text">
+                Whether I’m simplifying complex processes, designing onboarding experiences, or creating bilingual training materials, my goal is always the same: helping people feel supported while they learn.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="strengths">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <small>WHAT GUIDES MY WORK</small>
+            <h2>Learning Design Strengths</h2>
+        </div>
+
+        <div class="strength-grid">
+
+            <div class="strength-item">
+                <h4>Bilingual Learning Design</h4>
+                <p>
+                    Creating accessible learning experiences in both English and Spanish with clarity, empathy, and cultural awareness.
+                </p>
+            </div>
+
+            <div class="strength-item">
+                <h4>Human Centered Training</h4>
+                <p>
+                    Designing practical learning experiences that support confidence, engagement, and real workplace application.
+                </p>
+            </div>
+
+            <div class="strength-item">
+                <h4>Structured Learning Systems</h4>
+                <p>
+                    Building onboarding journeys, training resources, and scalable systems that help organizations support people more effectively.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="personal-note">
+
+    <div class="container">
+
+        <div class="note-card">
+
+            <h3>A personal note</h3>
+
+            <p>
+                Education has always represented opportunity, dignity, and transformation in my life. That belief continues to shape how I approach learning design today with curiosity, compassion, and a genuine desire to help people succeed.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
+```

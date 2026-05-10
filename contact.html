@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Fatima Baldovinos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#f7f5f1;
+    --text:#2f4746;
+    --accent:#c98978;
+    --soft-green:#dde3df;
+    --soft-pink:#ead8d5;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--bg);
+    font-family:'Inter', sans-serif;
+    color:var(--text);
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    padding:30px 0;
+    border-bottom:1px solid rgba(0,0,0,.05);
+}
+
+.header-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.brand-name{
+    font-family:'Playfair Display', serif;
+    font-size:2.3rem;
+    font-weight:600;
+}
+
+.brand-subtitle{
+    color:var(--accent);
+    font-size:.8rem;
+    letter-spacing:5px;
+    margin-top:8px;
+}
+
+nav a{
+    margin-left:30px;
+    text-decoration:none;
+    color:var(--text);
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--accent);
+}
+
+/* CONTACT SECTION */
+
+.contact-section{
+    padding:120px 0;
+    position:relative;
+    overflow:hidden;
+}
+
+.contact-wrapper{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:80px;
+}
+
+/* LEFT SIDE */
+
+.contact-text{
+    flex:1;
+    max-width:560px;
+}
+
+.contact-label{
+    color:var(--accent);
+    letter-spacing:6px;
+    font-size:.8rem;
+    margin-bottom:25px;
+}
+
+.contact-text h1{
+    font-family:'Playfair Display', serif;
+    font-size:3.7rem;
+    line-height:1.08;
+    margin-bottom:30px;
+}
+
+.contact-line{
+    width:130px;
+    height:2px;
+    background:var(--accent);
+    margin-bottom:35px;
+}
+
+.contact-description{
+    font-size:1.05rem;
+    line-height:1.9;
+    color:#48615f;
+    max-width:500px;
+    margin-bottom:40px;
+}
+
+.contact-links a{
+    display:block;
+    text-decoration:none;
+    color:var(--text);
+    margin-bottom:18px;
+    font-size:1.05rem;
+    transition:.3s;
+}
+
+.contact-links a:hover{
+    color:var(--accent);
+}
+
+/* RIGHT SIDE */
+
+.contact-image-area{
+    flex:1;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.shape-one{
+    position:absolute;
+    width:340px;
+    height:340px;
+    background:var(--soft-green);
+    border-radius:50%;
+    top:-25px;
+    right:45px;
+    opacity:.65;
+}
+
+.shape-two{
+    position:absolute;
+    width:240px;
+    height:240px;
+    background:var(--soft-pink);
+    border-radius:50%;
+    bottom:-25px;
+    left:45px;
+    opacity:.65;
+}
+
+.contact-photo{
+    position:relative;
+    width:360px;
+    z-index:2;
+}
+
+.contact-photo img{
+    width:100%;
+    display:block;
+    border-radius:38% 62% 55% 45% / 42% 38% 62% 58%;
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+.header-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+}
+
+nav a{
+    margin-left:0;
+    margin-right:20px;
+}
+
+.contact-wrapper{
+    flex-direction:column;
+    text-align:center;
+    gap:60px;
+}
+
+.contact-text{
+    max-width:100%;
+}
+
+.contact-line{
+    margin:0 auto 35px;
+}
+
+.contact-description{
+    margin:0 auto 40px;
+}
+
+.contact-text h1{
+    font-size:3rem;
+}
+
+.contact-photo{
+    width:300px;
+}
+
+.shape-one{
+    width:250px;
+    height:250px;
+}
+
+.shape-two{
+    width:180px;
+    height:180px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container header-inner">
+
+        <div>
+            <div class="brand-name">Fatima Baldovinos</div>
+            <div class="brand-subtitle">INSTRUCTIONAL DESIGNER</div>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="contact-section">
+
+    <div class="container contact-wrapper">
+
+        <!-- LEFT -->
+
+        <div class="contact-text">
+
+            <div class="contact-label">
+                CONTACT
+            </div>
+
+            <h1>
+                Let’s create meaningful learning experiences together
+            </h1>
+
+            <div class="contact-line"></div>
+
+            <p class="contact-description">
+                Whether you'd like to collaborate, connect, or simply say hello, I’d love to hear from you.
+            </p>
+
+            <div class="contact-links">
+
+                <a href="mailto:fabaldovinos@gmail.com">
+                    fabaldovinos@gmail.com
+                </a>
+
+                <a href="https://www.linkedin.com/in/fatima-baldovinos-" target="_blank">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="contact-image-area">
+
+            <div class="shape-one"></div>
+            <div class="shape-two"></div>
+
+            <div class="contact-photo">
+                <img src="images/fatima-contact.jpg" alt="Fatima Baldovinos portrait">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
