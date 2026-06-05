@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Training Strategy | Fatima Baldovinos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<style>
+:root{
+    --bg:#f7f5f1;
+    --text:#2f4746;
+    --accent:#c98978;
+    --soft-green:#dde3df;
+    --soft-pink:#ead8d5;
+    --card:#ffffff;
+    --muted:#5d6a66;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--bg);
+    font-family:'Inter', sans-serif;
+    color:var(--text);
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+header{
+    padding:30px 0;
+    border-bottom:1px solid rgba(0,0,0,.05);
+}
+
+.header-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.brand-name{
+    font-family:'Playfair Display', serif;
+    font-size:2.3rem;
+    font-weight:600;
+}
+
+.brand-subtitle{
+    color:var(--accent);
+    font-size:.8rem;
+    letter-spacing:5px;
+    margin-top:8px;
+}
+
+nav a{
+    margin-left:30px;
+    text-decoration:none;
+    color:var(--text);
+    font-weight:500;
+}
+
+nav a:hover{
+    color:var(--accent);
+}
+
+.project-hero{
+    position:relative;
+    padding:95px 0 70px;
+    text-align:center;
+    overflow:hidden;
+}
+
+.circle-one{
+    width:170px;
+    height:170px;
+    background:var(--soft-green);
+    border-radius:50%;
+    position:absolute;
+    top:90px;
+    left:8%;
+    opacity:.78;
+}
+
+.circle-two{
+    width:115px;
+    height:115px;
+    background:var(--soft-pink);
+    border-radius:50%;
+    position:absolute;
+    right:10%;
+    bottom:80px;
+    opacity:.78;
+}
+
+.project-hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.project-hero small{
+    color:var(--accent);
+    letter-spacing:4px;
+    font-size:.85rem;
+    text-transform:uppercase;
+}
+
+.project-hero h1{
+    font-family:'Playfair Display', serif;
+    font-size:4rem;
+    line-height:1.12;
+    max-width:850px;
+    margin:22px auto 0;
+}
+
+.hero-line{
+    width:145px;
+    height:2px;
+    background:var(--accent);
+    margin:30px auto;
+}
+
+.project-hero p{
+    max-width:720px;
+    margin:auto;
+    line-height:1.9;
+    font-size:1.1rem;
+    color:var(--muted);
+}
+
+.mockup-large{
+    background:white;
+    padding:28px;
+    border-radius:22px;
+    box-shadow:0 16px 40px rgba(0,0,0,.08);
+    margin-top:55px;
+}
+
+.mockup-large img{
+    width:100%;
+    display:block;
+    border-radius:12px;
+}
+
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title small{
+    color:var(--accent);
+    letter-spacing:4px;
+    font-size:.85rem;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    font-family:'Playfair Display', serif;
+    font-size:3rem;
+    margin-top:15px;
+}
+
+.text-block{
+    max-width:760px;
+    margin:auto;
+    text-align:center;
+}
+
+.text-block p{
+    line-height:1.9;
+    font-size:1.08rem;
+    margin-bottom:22px;
+    color:var(--muted);
+}
+
+.two-column{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:center;
+}
+
+.info-card{
+    background:white;
+    padding:34px;
+    border-radius:22px;
+    box-shadow:0 10px 28px rgba(0,0,0,.05);
+}
+
+.info-card h3{
+    font-family:'Playfair Display', serif;
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.info-card p{
+    line-height:1.8;
+    margin-bottom:18px;
+    color:var(--muted);
+}
+
+.mockup{
+    background:white;
+    padding:22px;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.07);
+}
+
+.mockup img{
+    width:100%;
+    display:block;
+    border-radius:12px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:40px;
+}
+
+.process-card{
+    background:white;
+    padding:28px;
+    border-radius:20px;
+    box-shadow:0 8px 22px rgba(0,0,0,.04);
+    text-align:center;
+}
+
+.process-card h3{
+    font-family:'Playfair Display', serif;
+    font-size:1.5rem;
+    margin-bottom:12px;
+}
+
+.process-card p{
+    line-height:1.7;
+    color:var(--muted);
+}
+
+.back-link{
+    text-align:center;
+    padding:30px 0 80px;
+}
+
+.back-link a{
+    color:var(--accent);
+    text-decoration:none;
+    font-weight:600;
+}
+
+@media(max-width:900px){
+
+.header-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+}
+
+nav a{
+    margin-left:0;
+    margin-right:20px;
+}
+
+.project-hero h1{
+    font-size:3rem;
+}
+
+.two-column,
+.gallery,
+.process-grid{
+    grid-template-columns:1fr;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+    <div class="container header-inner">
+
+        <div>
+            <div class="brand-name">Fatima Baldovinos</div>
+            <div class="brand-subtitle">LEARNING EXPERIENCE DESIGNER</div>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<section class="project-hero">
+
+    <div class="circle-one"></div>
+    <div class="circle-two"></div>
+
+    <div class="container project-hero-content">
+
+        <small>STRATEGY PRESENTATION</small>
+
+        <h1>Employee Training & Onboarding Strategy</h1>
+
+        <div class="hero-line"></div>
+
+        <p>A modern training strategy presentation focused on onboarding, engagement, scalable learning systems, and organizational growth.</p>
+
+        <div class="mockup-large">
+            <img src="images/training-strategy-mockup.png" alt="Employee Training & Onboarding Strategy preview">
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <small>PROJECT PURPOSE</small>
+            <h2>Turning training strategy into a clear visual story</h2>
+        </div>
+        <div class="text-block">
+            <p>This presentation concept was designed to communicate a modern approach to employee onboarding and training. It focuses on clarity, engagement, learning systems, and measurable business outcomes.</p><p>The project connects learning strategy with executive communication, showing how training can support people and organizational performance.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <small>SELECTED SLIDES</small>
+            <h2>Strategy, roadmap, and learning outcomes</h2>
+        </div>
+        <div class="gallery">
+            <div class="mockup"><img src="images/training-strategy-1.png" alt="Employee training strategy cover slide"></div><div class="mockup"><img src="images/training-strategy-3.png" alt="Training strategy slide"></div><div class="mockup"><img src="images/training-strategy-4.png" alt="Training metrics slide"></div><div class="mockup"><img src="images/training-strategy-5.png" alt="Onboarding roadmap slide"></div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <small>DESIGN FOCUS</small>
+            <h2>What this project demonstrates</h2>
+        </div>
+        <div class="process-grid">
+            <div class="process-card"><h3>Learning Strategy</h3><p>Organizing onboarding goals, training needs, and performance outcomes into a clear structure.</p></div><div class="process-card"><h3>Corporate Communication</h3><p>Creating polished slides that feel appropriate for a business audience.</p></div><div class="process-card"><h3>Systems Thinking</h3><p>Showing how onboarding, engagement, feedback, and growth connect across the employee experience.</p></div>
+        </div>
+    </div>
+</section>
+
+
+<div class="back-link">
+    <a href="portfolio.html">Back to All Projects</a>
+</div>
+
+</body>
+</html>

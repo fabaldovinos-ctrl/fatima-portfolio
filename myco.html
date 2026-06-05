@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Myco Onboarding | Fatima Baldovinos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#f7f5f1;
+    --text:#2f4746;
+    --accent:#c98978;
+    --soft-green:#dde3df;
+    --soft-pink:#ead8d5;
+    --card:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--bg);
+    font-family:'Inter', sans-serif;
+    color:var(--text);
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+header{
+    padding:30px 0;
+    border-bottom:1px solid rgba(0,0,0,.05);
+}
+
+.header-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.brand-name{
+    font-family:'Playfair Display', serif;
+    font-size:2.3rem;
+    font-weight:600;
+}
+
+.brand-subtitle{
+    color:var(--accent);
+    font-size:.8rem;
+    letter-spacing:5px;
+    margin-top:8px;
+}
+
+nav a{
+    margin-left:30px;
+    text-decoration:none;
+    color:var(--text);
+    font-weight:500;
+}
+
+.project-hero{
+    position:relative;
+    padding:95px 0 70px;
+    text-align:center;
+    overflow:hidden;
+}
+
+.circle-one{
+    width:170px;
+    height:170px;
+    background:var(--soft-green);
+    border-radius:50%;
+    position:absolute;
+    top:90px;
+    left:8%;
+}
+
+.circle-two{
+    width:115px;
+    height:115px;
+    background:var(--soft-pink);
+    border-radius:50%;
+    position:absolute;
+    right:10%;
+    bottom:80px;
+}
+
+.project-hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.project-hero small{
+    color:var(--accent);
+    letter-spacing:4px;
+    font-size:.85rem;
+}
+
+.project-hero h1{
+    font-family:'Playfair Display', serif;
+    font-size:4rem;
+    line-height:1.12;
+    max-width:780px;
+    margin:22px auto 0;
+}
+
+.hero-line{
+    width:145px;
+    height:2px;
+    background:var(--accent);
+    margin:30px auto;
+}
+
+.project-hero p{
+    max-width:680px;
+    margin:auto;
+    line-height:1.9;
+    font-size:1.1rem;
+}
+
+.mockup-large{
+    background:white;
+    padding:28px;
+    border-radius:22px;
+    box-shadow:0 16px 40px rgba(0,0,0,.08);
+    margin-top:55px;
+}
+
+.mockup-large img{
+    width:100%;
+    display:block;
+    border-radius:12px;
+}
+
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title small{
+    color:var(--accent);
+    letter-spacing:4px;
+    font-size:.85rem;
+}
+
+.section-title h2{
+    font-family:'Playfair Display', serif;
+    font-size:3rem;
+    margin-top:15px;
+}
+
+.text-block{
+    max-width:760px;
+    margin:auto;
+    text-align:center;
+}
+
+.text-block p{
+    line-height:1.9;
+    font-size:1.1rem;
+    margin-bottom:22px;
+}
+
+.two-column{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:center;
+}
+
+.info-card{
+    background:white;
+    padding:34px;
+    border-radius:22px;
+    box-shadow:0 10px 28px rgba(0,0,0,.05);
+}
+
+.info-card h3{
+    font-family:'Playfair Display', serif;
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.info-card p{
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+.mockup{
+    background:white;
+    padding:22px;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.07);
+}
+
+.mockup img{
+    width:100%;
+    display:block;
+    border-radius:12px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:40px;
+}
+
+.process-card{
+    background:white;
+    padding:28px;
+    border-radius:20px;
+    box-shadow:0 8px 22px rgba(0,0,0,.04);
+    text-align:center;
+}
+
+.process-card h3{
+    font-family:'Playfair Display', serif;
+    font-size:1.5rem;
+    margin-bottom:12px;
+}
+
+.process-card p{
+    line-height:1.7;
+}
+
+.back-link{
+    text-align:center;
+    padding:30px 0 80px;
+}
+
+.back-link a{
+    color:var(--accent);
+    text-decoration:none;
+    font-weight:600;
+}
+
+@media(max-width:900px){
+
+.header-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+}
+
+nav a{
+    margin-left:0;
+    margin-right:20px;
+}
+
+.project-hero h1{
+    font-size:3rem;
+}
+
+.two-column{
+    grid-template-columns:1fr;
+}
+
+.gallery{
+    grid-template-columns:1fr;
+}
+
+.process-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container header-inner">
+
+        <div>
+            <div class="brand-name">Fatima Baldovinos</div>
+            <div class="brand-subtitle">LEARNING EXPERIENCE DESIGNER</div>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="project-hero">
+
+    <div class="circle-one"></div>
+    <div class="circle-two"></div>
+
+    <div class="container project-hero-content">
+
+        <small>CASE STUDY</small>
+
+        <h1>Bilingual Onboarding and Safety Training Experience</h1>
+
+        <div class="hero-line"></div>
+
+        <p>
+            A structured onboarding and training experience designed to help manufacturing employees access clear, practical, and bilingual learning resources.
+        </p>
+
+        <div class="mockup-large">
+            <img src="images/myco-welcome.png" alt="Welcome screen for the onboarding experience">
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="section-title">
+            <small>THE CHALLENGE</small>
+            <h2>Making onboarding easier to follow</h2>
+        </div>
+
+        <div class="text-block">
+            <p>
+                The onboarding experience needed to be more organized, accessible, and easier to follow for employees working in a manufacturing environment.
+            </p>
+
+            <p>
+                The goal was to support employees with clear information about company expectations, safety topics, and role based training while also considering bilingual access and real workplace limitations.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="two-column">
+
+            <div class="info-card">
+                <h3>My Approach</h3>
+
+                <p>
+                    I began by looking at how employees would actually experience the training, not just how the content looked on paper.
+                </p>
+
+                <p>
+                    I focused on organizing information into clear learning paths, simplifying the language where possible, and creating materials that could support both English and Spanish speakers.
+                </p>
+
+                <p>
+                    The experience was tested, adjusted, and refined based on how the content worked in real use.
+                </p>
+            </div>
+
+            <div class="mockup">
+                <img src="images/myco-entry-experience.png" alt="Myco training portal preview">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="section-title">
+            <small>LEARNING STRUCTURE</small>
+            <h2>Designing for clarity and access</h2>
+        </div>
+
+        <div class="gallery">
+
+            <div class="mockup">
+                <img src="images/myco-company-understanding.png" alt="Company overview training screen">
+            </div>
+
+            <div class="mockup">
+                <img src="images/myco-learning-outcomes.png" alt="Learning objectives training screen">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="section-title">
+            <small>TRAINING CONTENT</small>
+            <h2>Safety and workplace expectations</h2>
+        </div>
+
+        <div class="two-column">
+
+            <div class="mockup">
+                <img src="images/myco-safety-foundations.png" alt="Safety and health policies training screen">
+            </div>
+
+            <div class="info-card">
+                <h3>Practical workplace learning</h3>
+
+                <p>
+                    The training materials were designed to communicate essential information such as safety expectations, workplace policies, and role specific training requirements.
+                </p>
+
+                <p>
+                    The goal was not only to present information, but to make it easier for employees to understand what they needed to do and why it mattered.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="section-title">
+            <small>SAFETY MODULES</small>
+            <h2>Role based safety training</h2>
+        </div>
+
+        <div class="gallery">
+
+            <div class="mockup">
+                <img src="images/operator-safety-training-content.png" alt="Lockout Tagout training screen">
+            </div>
+
+            <div class="mockup">
+                <img src="images/operator-safety-training-overview.png" alt="Forklift training screen">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="section-title">
+            <small>PROCESS THINKING</small>
+            <h2>How the solution evolved</h2>
+        </div>
+
+        <div class="process-grid">
+
+            <div class="process-card">
+                <h3>Understand</h3>
+                <p>
+                    I considered the needs of the company, the role of the employee, and the information people needed to access first.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <h3>Organize</h3>
+                <p>
+                    I grouped training content into clear paths so employees could move through the experience with less confusion.
+                </p>
+            </div>
+
+            <div class="process-card">
+                <h3>Refine</h3>
+                <p>
+                    I tested the experience, noticed what could be improved, and adjusted the content and structure to make it clearer.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="section-title">
+            <small>OUTCOME</small>
+            <h2>A more structured onboarding experience</h2>
+        </div>
+
+        <div class="text-block">
+            <p>
+                This project helped transform scattered onboarding and safety information into a more organized learning experience.
+            </p>
+
+            <p>
+                It also shows how I approach learning design: by listening to the needs of the organization, considering the reality of the learner, testing the experience, and improving the solution when needed.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<div class="back-link">
+    <a href="index.html">Back to Home</a>
+</div>
+
+</body>
+</html>
